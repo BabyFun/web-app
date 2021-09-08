@@ -24,6 +24,8 @@ $('#button_slide').on('click', function() {
         $("#button_slide").remove(); */
         $('#thesection').remove();
         $(".scoregame").removeAttr('style');
+        $(".foot").remove();
+
     } else {
 
         $(".slide.slide_active").removeClass('slide_active');

@@ -200,7 +200,7 @@ h1 {
     background-color: white;
     border-radius: 15px;
     font-size: 120px;
-    color: #0098FF;
+    color: #191919;
     width: calc(50% - 5px);
     text-align: center;
     font-family: "Segoe UI";
@@ -211,7 +211,7 @@ h1 {
     background-color: white;
     border-radius: 15px;
     font-size: 120px;
-    color: #ffb700;
+    color: #191919;
     width: calc(50% - 5px);
     text-align: center;
     font-family: "Segoe UI";
@@ -259,7 +259,7 @@ h1 {
     background-color: white;
     border-radius: 15px;
     font-size: 61px;
-    color: #0098FF;
+    color: #191919;
     width: calc(50% - 2px);
     text-align: center;
     font-family: "Segoe UI";
@@ -268,7 +268,7 @@ h1 {
     background-color: white;
     border-radius: 15px;
     font-size: 61px;
-    color: #ffb700;
+    color: #191919;
     width: calc(50% - 2px);
     text-align: center;
     font-family: "Segoe UI";
