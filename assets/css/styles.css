@@ -161,3 +161,231 @@ h1 {
 .bleu {
     color: #0098FF;
 }
+
+/* AJOUT ANTONIN
+/*--------------- NORMAL GAME --------------------*/
+
+.blue_window{
+    text-align: center;
+    background-color: #0098FF;
+    border-radius: 15px;
+    margin: 0 20% 0 20%;
+    font-family: "Segoe UI";
+    padding: 10px 0 10px 0;
+    transition-duration: 1.5s;
+
+}
+.blue_window>p{
+    font-size: 37px;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.blue_window>p:nth-child(2){
+    font-size: 9px;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.scoreboard {
+    margin: 15px 20% 0 20%;
+    display: flex;
+    justify-content: space-between;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.scoreboard>div:nth-child(1) {
+    background-color: white;
+    border-radius: 15px;
+    font-size: 120px;
+    color: #0098FF;
+    width: calc(50% - 5px);
+    text-align: center;
+    font-family: "Segoe UI";
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.scoreboard>div:nth-child(2) {
+    background-color: white;
+    border-radius: 15px;
+    font-size: 120px;
+    color: #ffb700;
+    width: calc(50% - 5px);
+    text-align: center;
+    font-family: "Segoe UI";
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.sharegame {
+    background-color: #ffb700;
+    z-index: -50;
+    border-radius: 50px;
+    margin: 15px 20% 0 20%;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Segoe UI";
+    padding: 5px 0 5px 0;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+/*------------------- AVEC MALUS/BONUS ----------------*/
+.blue_window_small{
+    text-align: center;
+    background-color: #0098FF;
+    border-radius: 15px;
+    margin: -20px 35% 0 35%;
+    font-family: "Segoe UI";
+    padding: 10px 0 10px 0;
+
+}
+.blue_window_small>p{
+    font-size: 19px;
+}
+.blue_window_small>p:nth-child(2){
+    font-size: 5px;
+}
+.scoreboard_small {
+    margin: 5px 35% 0 35%;
+    display: flex;
+    justify-content: space-between;
+}
+.scoreboard_small>div:nth-child(1) {
+    background-color: white;
+    border-radius: 15px;
+    font-size: 61px;
+    color: #0098FF;
+    width: calc(50% - 2px);
+    text-align: center;
+    font-family: "Segoe UI";
+}
+.scoreboard_small>div:nth-child(2) {
+    background-color: white;
+    border-radius: 15px;
+    font-size: 61px;
+    color: #ffb700;
+    width: calc(50% - 2px);
+    text-align: center;
+    font-family: "Segoe UI";
+    opacity: 1;
+}
+.sharegame_small {
+    opacity: 0;
+    background-color: #ffb700;
+    border-radius: 50px;
+    margin: 15px 20% 0 20%;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Segoe UI";
+    padding: 5px 0 5px 0;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.middle_text {
+    margin: -30px 25% 0 25%;
+    text-align: center;
+}
+.middle_text>p:nth-child(1){
+    color: white;
+    font-family: "Segoe UI";
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.middle_text>p:nth-child(2){
+    color: #ffb700;
+    font-family: "Segoe UI";
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 43px;
+}
+.pledges {
+    margin: 20px 10% 0 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.pledges>div {
+    width: calc(50% - 15px);
+    text-align: center;
+    color: white;
+    background-color: #ffb700;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    padding: 13px 4px 13px 4px;
+}
+.pledges>div:hover{
+    transform: scale(0.95);
+    transition: 0.2s;
+    transition-timing-function: step-end;
+}
+.gauge_container {
+    margin: 20px 10% 0 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 15px;
+    font-family: "Segoe UI";
+    padding: 13px 4px 13px 4px;
+}
+.gauge1, .gauge2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(50% - 15px);
+}
+.gauge1>div:nth-child(1){
+    margin: 0 40% 0 40%;
+    background-color: #ffb700;
+    padding-top: 60px;
+}
+.gauge2>div:nth-child(1){
+    margin: 40px 40% 0 40%;
+    background-color: #ffb700;
+    padding-top: 20px;
+}
+.gauge1>div:nth-child(2), .gauge2>div:nth-child(2) {
+    font-family: "Segoe UI";
+    font-size: 12px;
+}
+.time_small {
+    height: 12px;
+    margin: 10px 20% 0 20%;
+    background-color: #ffb700;
+    border: 2px solid #ffb700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.time_small>span {
+    font-family: "Segoe UI";
+    font-size: 8px;
+}
+
+.malus_popup {
+    margin-top: 100vh;
+    z-index: 1000;
+    animation-name: none;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.34,1.19,.95,1);
+    animation-fill-mode: forwards;
+
+
+}
+@keyframes malus_coming {
+    0%{ margin-top: 100vh; }
+    100%{ margin-top: 15px; }
+}
+@keyframes malus_reversecoming {
+    0%{ margin-top: 15px; }
+    100%{ margin-top: 100vh; }
+}
+/*in : cubic-bezier(.34,1.19,.95,1);
+out : cubic-bezier(1,.43,.95,1)
+ */
