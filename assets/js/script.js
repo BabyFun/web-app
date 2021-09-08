@@ -15,5 +15,28 @@ $("#change").click(function () {
 });
 
 
+$('#button_slide').on('click', function() {
+    let idSlideActive = $('.slide.slide_active').index();
+
+    if(idSlideActive+1 == $(".slide").length){
+        /* $(".container_slide").remove();
+        $(".slider_dotte").remove();
+        $("#button_slide").remove(); */
+        $('#thesection').remove();
+        $(".scoregame").removeAttr('style');
+    } else {
+
+        $(".slide.slide_active").removeClass('slide_active');
 
 
+        $(".slide")[idSlideActive+1].classList.add('slide_active');
+
+        
+        $(".dotted.dotted_active").removeClass('dotted_active');
+        $(".dotted")[idSlideActive+1].classList.add('dotted_active');
+
+        if(idSlideActive == $(".slide").length-2){
+            $('#button_slide').html("Terminer");
+        }
+    }
+});

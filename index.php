@@ -8,10 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <section>
+    <section id="thesection">
         <h1>Bienvenue sur BabyFun !</h1>
         <div class="container_slide">
-            <div class="slide ">
+            <div class="slide slide_active">
                 <h2>Attends ton tour en t'amusant !</h2>
                 <p>C'est toi le qui contrôle la partie, à tous moments un vote pour attribuer un malus ou un bonus aux équipes</p>
             </div>
@@ -26,7 +26,7 @@
                     <div class="bonus" style="background-color: #0098ff;">Un jour supplémentaire</div>
                 </div>
             </div>
-            <div class="slide slide_active">
+            <div class="slide">
                 <h2>Attention le temps tourne</h2>
                 <div class="time">
                     <span>13s</span>
@@ -38,11 +38,18 @@
             <div class="dotted"></div>
             <div class="dotted"></div>
         </div>
-        <button class="button_slide">Suivant</button>
+        <button class="button_slide" id="button_slide">Suivant</button>
         <p class="foot">Un jeu créé par une équipe de l'EPSI Bordeaux</p>
     </section>
 
-    <section class="scoregame">
+
+
+    <!------------------------   AJOUT ANTO    --------------------------->
+
+
+
+    
+    <section class="scoregame" style="display: none;">
         <h1>BabyFun</h1>
         <p class="foot">Un jeu créé par une équipe de l'EPSI Bordeaux</p>
         <div class="blue_window"><p>03:56</p><p>Temps de jeu</p></div>
