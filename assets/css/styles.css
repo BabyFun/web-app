@@ -289,41 +289,53 @@ h1 {
     transition-duration: 1s;
     transition-timing-function: ease-out;
 }
-.middle_text {
+.middle_text_malus, .middle_text_bonus {
     margin: -30px 25% 0 25%;
     text-align: center;
 }
-.middle_text>p:nth-child(1){
+.middle_text_malus>p:nth-child(1), .middle_text_bonus>p:nth-child(1){
     color: white;
     font-family: "Segoe UI";
     text-transform: uppercase;
     font-size: 22px;
 }
-.middle_text>p:nth-child(2){
-    color: #ffb700;
+.middle_text_malus>p:nth-child(2), .middle_text_bonus>p:nth-child(2) {
     font-family: "Segoe UI";
     text-transform: uppercase;
+    font-style: italic;
     font-weight: bold;
     font-size: 43px;
 }
-.pledges {
+.middle_text_malus>p:nth-child(2) {
+    color: #ffb700;
+}
+.middle_text_bonus>p:nth-child(2) {
+    color: #0098FF;
+}
+.pledges_malus, .pledges_bonus {
     margin: 20px 10% 0 10%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
-.pledges>div {
+.pledges_malus>div, .pledges_bonus>div {
     width: calc(50% - 15px);
     text-align: center;
     color: white;
-    background-color: #ffb700;
     border-radius: 15px;
     font-size: 14px;
     font-family: "Segoe UI";
     font-weight: bold;
     padding: 13px 4px 13px 4px;
 }
-.pledges>div:hover{
+.pledges_malus>div {
+    background-color: #ffb700;
+}
+
+.pledges_bonus>div {
+    background-color: #0098FF;
+}
+.pledges_malus>div:hover{
     transform: scale(0.95);
     transition: 0.2s;
     transition-timing-function: step-end;
@@ -338,41 +350,71 @@ h1 {
     font-family: "Segoe UI";
     padding: 13px 4px 13px 4px;
 }
-.gauge1, .gauge2{
+.gauge1_malus, .gauge2_malus, .gauge1_bonus, .gauge2_bonus{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: calc(50% - 15px);
 }
-.gauge1>div:nth-child(1){
+.gauge1_malus>div:nth-child(1){
     margin: 0 40% 0 40%;
     background-color: #ffb700;
     padding-top: 60px;
 }
-.gauge2>div:nth-child(1){
+.gauge2_malus>div:nth-child(1){
     margin: 40px 40% 0 40%;
     background-color: #ffb700;
     padding-top: 20px;
 }
-.gauge1>div:nth-child(2), .gauge2>div:nth-child(2) {
+.gauge1_bonus>div:nth-child(1){
+    margin: 0 40% 0 40%;
+    background-color: #0098FF;
+    padding-top: 60px;
+}
+.gauge2_bonus>div:nth-child(1){
+    margin: 40px 40% 0 40%;
+    background-color: #0098FF;
+    padding-top: 20px;
+}
+.gauge1_malus>div:nth-child(2), .gauge2_malus>div:nth-child(2), .gauge1_bonus>div:nth-child(2), .gauge2_bonus>div:nth-child(2) {
     font-family: "Segoe UI";
     font-size: 12px;
 }
-.time_small {
+.time_small_malus, .time_small_bonus {
     height: 12px;
     margin: 10px 20% 0 20%;
-    background-color: #ffb700;
-    border: 2px solid #ffb700;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.time_small>span {
+.time_small_malus {
+    background-color: #02182B;
+    border: 2px solid #ffb700;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+}
+.time_small_bonus {
+
+    background-color: #02182B;
+    border: 2px solid #0098FF;
+    display: flex;
+    justify-content: start;
+}
+.time_small_malus>span{
+    background-color: #ffb700;
+    width: 100%;
     font-family: "Segoe UI";
     font-size: 8px;
 }
+.time_small_bonus>span {
+    background-color: #0098FF;
+    font-family: "Segoe UI";
+    width: 100%;
+    font-size: 8px;
 
-.malus_popup {
+}
+.malus_popup, .malus_popup_result {
     margin-top: 100vh;
     z-index: 1000;
     animation-name: none;
@@ -382,13 +424,32 @@ h1 {
 
 
 }
+.malus_popup_result {
+    margin-top: 200vh;
+    z-index: 1000;
+    animation-name: none;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.34,1.19,.95,1);
+    animation-fill-mode: forwards;
+    text-align: center;
+
+
+}
 @keyframes malus_coming {
-    0%{ margin-top: 100vh; }
-    100%{ margin-top: 15px; }
+    0%{ margin-top: 100vh; display: flex}
+    100%{ margin-top: 15px; display: none}
 }
 @keyframes malus_reversecoming {
-    0%{ margin-top: 15px; }
-    100%{ margin-top: 100vh; }
+    0%{ margin-top: 15px; display: flex}
+    100%{ margin-top: 100vh; display: none}
+}
+@keyframes result_coming {
+    0%{ margin-top: 200vh; }
+    100%{ margin-top: -1000px; }
+}
+@keyframes result_reversecoming {
+    0%{ margin-top: -1000px; }
+    100%{ margin-top: 200vh; }
 }
 /*in : cubic-bezier(.34,1.19,.95,1);
 out : cubic-bezier(1,.43,.95,1)
