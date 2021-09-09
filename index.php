@@ -11,6 +11,7 @@ $choixBonus = pickGages();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -63,7 +64,7 @@ $choixBonus = pickGages();
         </div>
         <div class="sharegame">Partage la partie</div>
 
-        <button id="change" style="position: absolute; top: 10px">Change la taille</button>
+<!--        <button id="change" style="position: absolute; top: 10px">Change la taille</button>-->
 
     <?php if($choixBonus[0]['bonus'] == 1) {
 
@@ -77,15 +78,19 @@ $choixBonus = pickGages();
                 <div><?= $choixBonus[0]['nom'] ?></div>
                 <div><?= $choixBonus[1]['nom'] ?></div>
             </div>
-            <div class="gauge_container">
-                <div class="gauge1_bonus">
-                    <div><img src="assets/media/images/person.svg"></div>
-                    <div>10 personnes</div>
-                </div>
-                <div class="gauge2_bonus">
-                    <div><img src="assets/media/images/person.svg"></div>
-                    <div>3 personnes</div>
-                </div>
+<!--            <div class="gauge_container">-->
+<!--                <div class="gauge1_bonus">-->
+<!--                    <div><img src="assets/media/images/person.svg"></div>-->
+<!--                    <div>10 personnes</div>-->
+<!--                </div>-->
+<!--                <div class="gauge2_bonus">-->
+<!--                    <div><img src="assets/media/images/person.svg"></div>-->
+<!--                    <div>3 personnes</div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="container_speed" style="position: relative;height:128px;display: flex; justify-content: center; align-items: center; margin: 20px 0">
+                <img id="speed_meter" class="responsive_speed" style="position: absolute;top:0;" src="assets/media/speed_meter.svg">
+                <img id="speed_niddle" class="responsive_speed_niddle" style="position: absolute;top: 41px;left: 0 ;right: 0;margin: 0 auto;width: 13px;transform-origin: bottom center;transform: rotate(0deg);" src="assets/media/speed_niddle.svg">
             </div>
             <div class="time_small_bonus">
                 <span id="bar-value">&nbsp;</span>
@@ -108,20 +113,23 @@ $choixBonus = pickGages();
                 <div><?= $choixBonus[0]['nom'] ?></div>
                 <div><?= $choixBonus[1]['nom'] ?></div>
             </div>
-            <div class="gauge_container">
-                <div class="gauge1_malus">
-                    <div><img src="assets/media/images/person.svg"></div>
-                    <div>10 personnes</div>
-                </div>
-                <div class="gauge2_malus">
-                    <div><img src="assets/media/images/person.svg"></div>
-                    <div>3 personnes</div>
-                </div>
+<!--            <div class="gauge_container">-->
+<!--                <div class="gauge1_malus">-->
+<!--                    <div><img src="assets/media/images/person.svg"></div>-->
+<!--                    <div>10 personnes</div>-->
+<!--                </div>-->
+<!--                <div class="gauge2_malus">-->
+<!--                    <div><img src="assets/media/images/person.svg"></div>-->
+<!--                    <div>3 personnes</div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="container_speed" style="position: relative;height:128px;display: flex; justify-content: center; align-items: center; margin: 20px 0">
+                <img class="responsive_speed" style="position: absolute;top:0;" src="assets/media/speed_meter.svg">
+                <img class="responsive_speed_niddle" style="position: absolute;top: 41px;left: 0 ;right: 0;margin: 0 auto;width: 13px;transform-origin: bottom center;transform: rotate(0deg);" src="assets/media/speed_niddle.svg">
             </div>
             <div class="time_small_malus">
                 <span id="bar-value">&nbsp;</span>
             </div>
-
         </div>
 
 

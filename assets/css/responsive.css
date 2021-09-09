@@ -1,0 +1,17 @@
+@media only screen and (max-height: 670px){
+
+    .foot {
+        display: none;
+    }
+    .responsive_speed {
+        height: 90px;
+    }
+
+    .responsive_speed_niddle {
+        width: 9px!important;
+        top: 30px!important;
+    }
+    .container_speed{
+        margin: 20px 0px -15px 0px!important;
+    }
+}

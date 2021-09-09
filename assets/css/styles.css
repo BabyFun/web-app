@@ -414,7 +414,8 @@ h1 {
     font-size: 8px;
 
 }
-.malus_popup, .malus_popup_result {
+
+.malus_popup, .malus_popup_result{
     margin-top: 100vh;
     z-index: 1000;
     animation-name: none;
